@@ -1,0 +1,22 @@
+<h2>Products</h2>
+
+<div>
+  <div id="product" *ngFor="let product of products">
+    <h3>
+      <a [title]="product.name + product.description">
+        {{ product.name }}
+      </a>
+    </h3>
+
+    <p><img src="product.src" ></p>
+
+    <p *ngIf="product.description">Description: {{ product.description }}</p>
+
+    <p *ngIf="product.price">Price: {{ product.price }}</p>
+
+    <button mat-raised-button (click)="share()">Share</button>
+
+    <button mat-raised-button (click)="share()">get car</button>
+  </div>
+  <div></div>
+</div>
